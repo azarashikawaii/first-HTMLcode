@@ -14,7 +14,7 @@ header {
     z-index: 100;
 }
 
-header h3 {
+header h1 {
     font-size: 30px;
     color: white;
     font-weight: normal;
@@ -30,11 +30,11 @@ header ul{
     margin: 0px;
 }
 header li{
-    font-style: 12px;
+    font-size: 18px;
     list-style: none;
     float: right;
     line-height: 70px;
-    transition: .3s;
+
 }
 header li:hover{
     opacity: 0.8;
@@ -43,6 +43,7 @@ header a{
     color: white;
     display: block;
     padding: 0 15px;
+    transition: .5s;
 }
 header a:hover{
     opacity: 0.7;
@@ -70,14 +71,15 @@ header a:hover{
     font-size: 25px;
     margin: 0;
 }
+.icons{
+    display: flex;
+    justify-content: flex-end;
+}
 .icons a{
+    margin-top: 600px;
     font-size: 30px;
     color: rgba(255, 255, 255, 0.7);
-    /* position: absolute; */
     padding: 0 10px;
-    float: right;
-    bottom: 20px;
-    right: 20px;
     transition: .5s;
 }
 .icons a:hover{
@@ -163,6 +165,7 @@ header a:hover{
 }
 .footer-box a{
     display: block;
+    width: 20%;
     color: black;
     transition: .3s;
 }
