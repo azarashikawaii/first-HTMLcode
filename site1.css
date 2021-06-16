@@ -13,7 +13,11 @@ header {
     left: 0;
     z-index: 100;
 }
-
+@media screen and (max-width: 480px) {
+    header{
+        display: table;
+    }
+}
 header h1 {
     font-size: 30px;
     color: white;
@@ -23,18 +27,39 @@ header h1 {
     line-height: 70px;
     float: left;
 }
+@media screen and (max-width: 480px){
+    header h1{
+        line-height: 60px;
+        font-size: 25px;
+        float: none;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+}
 header span{
     color:#ffd700 ;
 }
 header ul{
     margin: 0px;
 }
+@media screen and (max-width: 480px){
+    header ul{
+        text-align: center;
+        padding-left: 0;
+    }
+}
 header li{
     font-size: 18px;
     list-style: none;
     float: right;
     line-height: 70px;
-
+}
+@media screen and (max-width: 480px){
+    header li{
+        width: 50%;
+        font-size: 14px;
+        line-height: 30px;
+    }
 }
 header li:hover{
     opacity: 0.8;
@@ -45,6 +70,12 @@ header a{
     padding: 0 15px;
     transition: .5s;
 }
+@media screen and (max-width: 480px){
+    header a{
+    padding: 10px 40px 10px 40px;
+    border: 0.2px solid white; /*周りの枠を消したい*/
+    }
+}
 header a:hover{
     opacity: 0.7;
 }
@@ -52,7 +83,14 @@ header a:hover{
     height: 1001px;
     background-image: url(image/top-image.jpg);
     background-size: cover;
-    /* position: relative; */
+}
+@media screen and (max-width: 480px) {
+    /* 480px以下用（スマホ用）の記述 */
+    .top-wrap{
+        background-image: url(練習用smp素材/main_smp@2x.png);
+        background-size: 100%;
+        height: 811px; /*これ％指定にしたいです。あと画像の高さは1622pxなのはなんで？*/
+    }
 }
 .top-filter{
     height: 100%;
@@ -61,34 +99,60 @@ header a:hover{
 }
 .top-massage{
     color: white;
-    padding-top: 200px;
+    padding-top: 300px;
     padding-left: 50px;
-
+}
+@media screen and (max-width: 480px){
+    .top-massage{
+        padding-top: 250px;
+        padding-left: 20px;
+    }
 }
 .top-massage h2{
     font-size: 65px;
     margin: 0;
 }
+@media screen and (max-width: 480px){
+    .top-massage h2{
+        line-height: 98%;
+        font-size: 50px;
+        width: 80%;
+    }
+}
 .top-massage p{
     font-size: 25px;
     margin: 0;
+}
+@media screen and (max-width: 480px){
+    .top-massage p{
+        padding-top: 30px;
+        font-size: 16px;
+        width: 93%;
+    }
 }
 .icons{
     position: absolute;
     bottom: 20px;
     right: 20px;
-    /* display: flex;
-    justify-content: flex-end; */
 }
-.icons a{
-    margin-top: 600px;
-    font-size: 30px;
-    color: rgba(255, 255, 255, 0.7);
+.icons img{
+    height: 30px;
+    width: 30px;
+    opacity: 0.7;
     padding: 0 10px;
-    transition: .5s;
+    transition: .4s;
 }
-.icons a:hover{
-    color: rgba(255,255,255,1.0);
+@media screen and (max-width: 480px){
+    .icons img{
+        /*なぜかツイッターアイコンだけ表示されない*/
+        padding: 0 5px;
+        height: 25px;
+        width: 25px;
+        opacity: 1.0;
+    }
+}
+.icons img:hover{
+    opacity: 1.0;
     
 }
 .service-wrap > h3{
@@ -96,11 +160,23 @@ header a:hover{
     padding: 80px 0 40px;
     text-align: center;
 }
+@media screen and (max-width: 480px){
+    .service-wrap > h3{
+        font-size: 30px;
+        padding: 50px 10px 5px 10px;
+        margin: 0;
+    }
+}
 
 .service-container{
     display: flex;
     justify-content: center;
-
+}
+@media screen and (max-width: 480px){
+    .service-container{
+        display: block;
+        padding-bottom: 20px;
+    }
 }
 
 .service-box{
@@ -109,6 +185,12 @@ header a:hover{
     background-color: rgb(245,236,223);
     position: relative;
     
+}
+@media screen and (max-width: 480px){
+    .service-box{
+        width: 90%;
+        margin: 20px 20px 30px 20px;
+    }
 }
 .service-box span {
     position: absolute;
@@ -132,19 +214,43 @@ header a:hover{
     margin: 0 auto;
     color: black;
 }
+@media screen and (max-width: 480px){
+    .service-box h4, p{
+        width: 90%;
+    }
+}
 .service-box h4{
     padding-top: 20px;
     padding-bottom: 10px;
+}
+@media screen and (max-width: 480px){
+    .service-box h4{
+        font-size: 18px;
+    }
 }
 .service-box p{
     padding-bottom: 20px;
     font-size: 13px;
 }
+@media screen and (max-width: 480px){
+    .service-box p{
+        font-size: 14px;
+    }
+}
+
 .contact-wrap{
     height: 300px;
     background-color: #c4af9b;
     text-align: center;
     margin: 80px;
+}
+@media screen and (max-width: 480px){
+    .contact-wrap{
+        height: 60px;
+        margin: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 }
 .contact-wrap a{
     font-size: 20px;
@@ -154,25 +260,50 @@ header a:hover{
     padding: 20px 50px;
     transition: .5s;
 }
+@media screen and (max-width: 480px){
+    .contact-wrap a{
+        line-height: 60px;
+        padding: 20px 90px;
+    }
+}
 .contact-wrap a:hover{
     color: #c4af9b;
     background-color: white;
-
 }
 .footer-top{
     display: flex;
     justify-content: space-between;
     width: 90%;
-    margin: 0 auto;
+    margin: 0 60px;
+}
+@media screen and (max-width: 480px){
+    .footer-top{
+        display: table;
+        margin: auto;/*なぜか右にできる謎の空白。0にすると謎のmargin右ができる*/
+    }
 }
 .footer-box{
     width: 30%;
+}
+@media screen and (max-width: 480px){
+    .footer-box{
+    display: table-cell;
+    float: right;
+    width: 50%; /*順番を並べ替えてそれぞれの高さを均一にしたい*/
+    }
 }
 .footer-box a{
     display: block;
     width: 20%;
     color: black;
     transition: .3s;
+}
+@media screen and (max-width: 480px){
+    .footer-box a{
+        margin-left: 20px;
+        width: 100%;
+        font-size: 14px;
+    }
 }
 .footer-box a:hover{
     opacity: 0.5;
@@ -182,8 +313,21 @@ header a:hover{
     font-weight: bold;
     margin-bottom: 20px;
 }
+@media screen and (max-width: 480px){
+    .footer-box-title{
+        font-size: 16px;
+        margin: 50px 20px 10px 20px;
+    }
+}
 footer p{
     padding-top: 100px;
     padding-bottom: 20px;
     text-align: center;
 }
+@media screen and (max-width: 480px){
+    footer p{
+        font-size: 9px;
+        padding-top: 40px;
+    }
+}
+
