@@ -16,6 +16,7 @@ header {
 @media screen and (max-width: 480px) {
     header{
         display: table;
+        /*iPhoneXなどは大丈夫なのですがiPhone6/7/8Plusは幅が足りないうえに右のボーダー線が見えてしまいます。*/
     }
 }
 header h1 {
@@ -73,23 +74,23 @@ header a{
 @media screen and (max-width: 480px){
     header a{
     padding: 10px 40px 10px 40px;
-    border: 0.2px solid white; /*周りの枠を消したい*/
+    border-top: 1px solid white;
+    border-right: 1px solid white;
     }
 }
 header a:hover{
     opacity: 0.7;
 }
 .top-wrap{
-    height: 1001px;
+    height: 100vh;
+    width: 100%;
     background-image: url(image/top-image.jpg);
     background-size: cover;
 }
 @media screen and (max-width: 480px) {
     /* 480px以下用（スマホ用）の記述 */
     .top-wrap{
-        background-image: url(練習用smp素材/main_smp@2x.png);
-        background-size: 100%;
-        height: 811px; /*これ％指定にしたいです。あと画像の高さは1622pxなのはなんで？*/
+        background-image: url(image/main_smp@2x.png);
     }
 }
 .top-filter{
@@ -144,7 +145,6 @@ header a:hover{
 }
 @media screen and (max-width: 480px){
     .icons img{
-        /*なぜかツイッターアイコンだけ表示されない*/
         padding: 0 5px;
         height: 25px;
         width: 25px;
@@ -273,34 +273,36 @@ header a:hover{
 .footer-top{
     display: flex;
     justify-content: space-between;
-    width: 90%;
-    margin: 0 60px;
+    margin: 0 auto;
+    padding: 0 5vw;
 }
 @media screen and (max-width: 480px){
     .footer-top{
-        display: table;
-        margin: auto;/*なぜか右にできる謎の空白。0にすると謎のmargin右ができる*/
+        flex-wrap: wrap;
+        align-items: stretch;
+        margin: 50px 0 0 0;
+        /*PC用設定を打ち消すためにmarginを指定するとブラウザ右が全部空く。でも指定しないとflex-boxが折り返せない*/
+        padding: 0;
     }
 }
 .footer-box{
-    width: 30%;
+    width: 100vw;
 }
 @media screen and (max-width: 480px){
     .footer-box{
-    display: table-cell;
-    float: right;
-    width: 50%; /*順番を並べ替えてそれぞれの高さを均一にしたい*/
+    height: 110px;
+    width: 50vw;
     }
 }
 .footer-box a{
     display: block;
-    width: 20%;
+    /* width: 20%; */
     color: black;
     transition: .3s;
 }
 @media screen and (max-width: 480px){
     .footer-box a{
-        margin-left: 20px;
+        padding-left: 20px;
         width: 100%;
         font-size: 14px;
     }
@@ -314,9 +316,9 @@ header a:hover{
     margin-bottom: 20px;
 }
 @media screen and (max-width: 480px){
-    .footer-box-title{
+    .footer-box h2{
+        padding-left: 20px;
         font-size: 16px;
-        margin: 50px 20px 10px 20px;
     }
 }
 footer p{
@@ -327,7 +329,6 @@ footer p{
 @media screen and (max-width: 480px){
     footer p{
         font-size: 9px;
-        padding-top: 40px;
+        padding-top:0;
     }
 }
-
