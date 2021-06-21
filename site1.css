@@ -86,13 +86,13 @@ header a:hover{
 .top-wrap{
     height: 100vh;
     width: 100%;
-    background-image: url(image/top-image.jpg);
+    background-image: url(../image/top-image.jpg);
     background-size: cover;
 }
 @media screen and (max-width: 480px) {
     /* 480px以下用（スマホ用）の記述 */
     .top-wrap{
-        background-image: url(image/main_smp@2x.png);
+        background-image: url(../image/main_smp@2x.png);
     }
 }
 .top-filter{
@@ -304,6 +304,7 @@ header a:hover{
 }
 @media screen and (max-width: 480px){
     .footer-box a{
+        box-sizing: border-box;
         padding-left: 20px;
         width: 100%;
         font-size: 14px;
