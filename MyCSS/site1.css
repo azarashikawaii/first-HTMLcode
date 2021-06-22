@@ -78,7 +78,7 @@ header a{
     border-top: 1px solid white;
     border-right: 1px solid white;
     }
-    header li:nth-child(3) a{
+    header li:nth-child(2n+1) a{
         border-right: hidden;
     }
 }
