@@ -1,0 +1,16 @@
+.content1{
+    width: 400px;
+    height: 150px;
+    background-color: pink;
+    border: 30px solid brown;
+    padding: 10px;
+    box-sizing: content-box;
+}
+.content2{
+    width: 400px;
+    height: 150px;
+    background-color: pink;
+    border: 30px solid brown;
+    padding: 10px;
+    box-sizing: border-box;
+}
