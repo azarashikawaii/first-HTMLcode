@@ -46,8 +46,10 @@ header ul{
 }
 @media screen and (max-width: 480px){
     header ul{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
         text-align: center;
-        padding-left: 0;
     }
 }
 header li{
@@ -76,10 +78,10 @@ header a{
     header a{
     padding: 10px 40px 10px 40px;
     border-top: 1px solid white;
-    border-right: 1px solid white;
+    /* border-right: 1px solid white; */
     }
     header li:nth-child(2n+1) a{
-        border-right: hidden;
+        border-right: 1px solid white;
     }
 }
 header a:hover{
